@@ -3,30 +3,31 @@ import React from 'react';
 
 import styles from './Books.style';
 import useFetch from '../../Hooks/useFetch';
+import Config from 'react-native-config';
 
 const Books = ({navigation}) => {
-  const api = 'https://api.potterdb.com//v1/books';
+  const api = 'https://api.potterdb.com/v1/books';
   const {data, loading, error} = useFetch(api);
 
-  const goDetail = (item)=>{
-    navigation.navigate('DetailPage', { selectedItem: item })
-  }
+  const goDetail = item => {
+    navigation.navigate('DetailPage', {selectedItem: item});
+  };
 
   const renderItem = ({item}) => (
-    <TouchableOpacity style={styles.container} key={item.id} onPress={()=>goDetail(item)}>
+    <TouchableOpacity
+      style={styles.container}
+      key={item.id}
+      onPress={() => goDetail(item)}>
       <Text style={styles.title}>{item.attributes.title}</Text>
     </TouchableOpacity>
   );
 
+  if (loading) return <Text>Loading...</Text>;
+  if (error) return <Text>Error: {error.message}</Text>;
+
   return (
     <SafeAreaView>
-      {loading ? (
-        <Text>Loading...</Text>
-      ) : error ? (
-        <Text>Error: {error.message}</Text>
-      ) : (
-        <FlatList data={data?.data} renderItem={renderItem} />
-      )}
+      <FlatList data={data?.data} renderItem={renderItem} />
     </SafeAreaView>
   );
 };
