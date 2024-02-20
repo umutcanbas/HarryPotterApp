@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './Books.style';
 import useFetch from '../../Hooks/useFetch';
 import TopMenu from '../../Components/TopMenu/TopMenu';
+import Loading from '../../Components/Loading/Loading';
 
 const Books = ({navigation}) => {
   const api = 'https://api.potterdb.com/v1/books';
@@ -23,7 +24,7 @@ const Books = ({navigation}) => {
     </TouchableOpacity>
   );
 
-  if (loading) return <Text>Loading...</Text>;
+  if (loading) return <Loading/>;
   if (error) return <Text>Error: {error.message}</Text>;
 
   return (
