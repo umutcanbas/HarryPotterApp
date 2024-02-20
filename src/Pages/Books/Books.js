@@ -3,7 +3,7 @@ import React from 'react';
 
 import styles from './Books.style';
 import useFetch from '../../Hooks/useFetch';
-import Config from 'react-native-config';
+import TopMenu from '../../Components/TopMenu/TopMenu';
 
 const Books = ({navigation}) => {
   const api = 'https://api.potterdb.com/v1/books';
@@ -12,6 +12,7 @@ const Books = ({navigation}) => {
   const goDetail = item => {
     navigation.navigate('DetailPage', {selectedItem: item});
   };
+  const onPressBack = () => navigation.goBack();
 
   const renderItem = ({item}) => (
     <TouchableOpacity
@@ -27,6 +28,7 @@ const Books = ({navigation}) => {
 
   return (
     <SafeAreaView>
+      <TopMenu navigation={navigation} title="Books"  onPress={onPressBack}/>
       <FlatList data={data?.data} renderItem={renderItem} />
     </SafeAreaView>
   );

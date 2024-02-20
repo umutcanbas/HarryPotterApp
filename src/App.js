@@ -10,7 +10,12 @@ const App = () => {
   const Stack = createNativeStackNavigator();
 
   return (
-    <NavigationContainer>
+    <NavigationContainer
+      theme={{
+        colors: {
+          background: 'transparent',
+        },
+      }}>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="HomePage" component={Home} />
         <Stack.Screen name="BooksPage" component={Books} />

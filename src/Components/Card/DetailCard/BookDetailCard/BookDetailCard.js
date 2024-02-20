@@ -23,10 +23,10 @@ const BookDetailCard = ({data}) => {
           <Text style={styles.title}>{data.title}</Text>
           <Text style={styles.author}>{data.author}</Text>
           <Text style={styles.summary}>{data.summary}</Text>
-          <Text style={styles.page}>Pages: {data.pages}</Text>
-          <Text style={styles.date}>Release date : {data.release_date}</Text>
+          <Text style={styles.text}>Pages: {data.pages}</Text>
+          <Text style={styles.text}>Release date : {data.release_date}</Text>
           <TouchableOpacity style={styles.wiki} onPress={handleWikiPress}>
-            <Text style={styles.wikiText}>wiki link : {data.wiki}</Text>
+            <Text style={styles.text}>wiki link : {data.wiki}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

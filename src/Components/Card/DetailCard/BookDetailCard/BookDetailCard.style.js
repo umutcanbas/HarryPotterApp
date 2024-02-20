@@ -26,19 +26,9 @@ export default StyleSheet.create({
     paddingTop: 10,
     fontWeight: 'bold',
   },
-  page: {
+  text: {
     fontWeight: 'bold',
     fontSize: 17,
-    margin: 10,
-  },
-  date: {
-    fontWeight: 'bold',
-    fontSize: 17,
-    margin: 10,
-  },
-  wikiText: {
-    fontSize: 17,
-    fontWeight: 'bold',
     margin: 10,
   },
 });

@@ -20,44 +20,9 @@ export default StyleSheet.create({
     paddingTop: 10,
     fontWeight: 'bold',
   },
-  budget: {
+  text: {
     fontSize: 15,
     fontWeight: 'bold',
     padding: 10,
-  },
-  box_office: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  directors: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  distributors: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  release_date: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  running_time: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    padding: 10,
-  },
-  trailerText: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    margin: 10,
-  },
-  wikiText: {
-    fontSize: 15,
-    fontWeight: 'bold',
-    margin: 10,
   },
 });

@@ -25,23 +25,23 @@ const MovieDetailCard = ({data}) => {
         <View style={styles.container}>
           <Text style={styles.title}>{data.title}</Text>
           <Text style={styles.summary}>{data.summary}</Text>
-          <Text style={styles.budget}>Budget: {data.budget}</Text>
-          <Text style={styles.box_office}>Box office: {data.box_office}</Text>
-          <Text style={styles.directors}>Directors: {data.directors}</Text>
-          <Text style={styles.distributors}>
+          <Text style={styles.text}>Budget: {data.budget}</Text>
+          <Text style={styles.text}>Box office: {data.box_office}</Text>
+          <Text style={styles.text}>Directors: {data.directors}</Text>
+          <Text style={styles.text}>
             Distributors: {data.distributors}
           </Text>
-          <Text style={styles.release_date}>
+          <Text style={styles.text}>
             Release date: {data.release_date}
           </Text>
-          <Text style={styles.running_time}>
+          <Text style={styles.text}>
             Running time: {data.running_time}
           </Text>
           <TouchableOpacity style={styles.wiki} onPress={handleWikiPress}>
-            <Text style={styles.wikiText}>Wiki link : {data.wiki}</Text>
+            <Text style={styles.text}>Wiki link : {data.wiki}</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.wiki} onPress={handleTrailerPress}>
-            <Text style={styles.trailerText}>
+            <Text style={styles.text}>
               Trailer link : {data.trailer}
             </Text>
           </TouchableOpacity>
