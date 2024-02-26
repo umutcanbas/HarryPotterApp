@@ -16,8 +16,8 @@ const BookDetailCard = ({data}) => {
   };
 
   return (
-    <SafeAreaView>
-      <ScrollView>
+    <View style={{flex:1}}>
+      <ScrollView style={{flex:1}}>
         <Image source={{uri: data.cover}} style={styles.cover} />
         <View style={styles.container}>
           <Text style={styles.title}>{data.title}</Text>
@@ -30,7 +30,7 @@ const BookDetailCard = ({data}) => {
           </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 

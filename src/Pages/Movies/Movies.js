@@ -29,7 +29,7 @@ const Books = ({navigation}) => {
   if (error) return <Text>Error: {error.message}</Text>;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1}}>
       <TopMenu navigation={navigation} onPress={onPressBack} />
       <FlatList data={data?.data} renderItem={renderItem} />
     </SafeAreaView>

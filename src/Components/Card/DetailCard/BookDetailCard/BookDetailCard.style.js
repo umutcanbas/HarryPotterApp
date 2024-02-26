@@ -2,13 +2,19 @@ import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    backgroundColor: '#e0e0e0',
+    backgroundColor: 'white',
+    borderTopLeftRadius:10,
+    borderTopRightRadius:10,
+    borderTopWidth:1,
+    borderTopColor:'black',
+    marginTop:10
   },
 
   cover: {
     width: 400,
     height: 400,
     resizeMode: 'contain',
+    marginTop:10
   },
   author: {
     fontSize: 22,

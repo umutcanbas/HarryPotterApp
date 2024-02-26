@@ -19,8 +19,8 @@ const MovieDetailCard = ({data}) => {
   };
 
   return (
-    <SafeAreaView>
-      <ScrollView>
+    <SafeAreaView style={{flex:1}}>
+      <ScrollView style={{flex:1}}>
         <Image source={{uri: data.poster}} style={styles.poster} />
         <View style={styles.container}>
           <Text style={styles.title}>{data.title}</Text>

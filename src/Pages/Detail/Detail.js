@@ -14,7 +14,7 @@ const Detail = ({route , navigation}) => {
   const CardComponent = type === 'movie' ? MovieDetailCard : BookDetailCard;
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1}}>
       <TopMenu navigation={navigation} onPress={onPressBack} />
       <CardComponent data={selectedItem} />
     </SafeAreaView>
